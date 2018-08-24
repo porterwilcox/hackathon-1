@@ -12,7 +12,10 @@ Navy - 2B4353 */
   display: flex;
   justify-content: flex-end;
 }
-
+body form {
+  display: flex;
+  justify-content: flex-end;
+}
 .logo-text {
   font-family: 'Lobster', cursive;
   width: fit-content;
