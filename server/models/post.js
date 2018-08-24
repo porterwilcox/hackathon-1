@@ -6,12 +6,7 @@ let ObjectId = Schema.Types.ObjectId
 let schema = new Schema({
     userId: {
         type: ObjectId,
-        ref: "User",
-        required: true
-    },
-    postId: {
-        type: ObjectId,
-        ref: "Post",
+        ref: 'User',
         required: true
     },
     timestamp: {
@@ -23,9 +18,14 @@ let schema = new Schema({
         required: true
     },
     content: {
+        type: Object,
+        required: true
+    },
+    title: {
         type: String,
         required: true
     }
+
 })
 
 module.exports = mongoose.model(schemaName, schema)

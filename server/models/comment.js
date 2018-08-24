@@ -6,12 +6,12 @@ let ObjectId = Schema.Types.ObjectId
 let schema = new Schema({
     userId: {
         type: ObjectId,
-        ref: "User",
+        ref: 'User',
         required: true
     },
     postId: {
         type: ObjectId,
-        ref: "Post",
+        ref: 'Post',
         required: true
     },
     timestamp: {
