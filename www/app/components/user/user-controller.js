@@ -14,26 +14,26 @@ function draw() {
   //  </div>
   //  `
   document.getElementById("username-title").innerHTML = `<b>${store.state.user.username}!</b>`
-  document.getElementById("user-controls").innerHTML = `<i onclick="app.controllers.user.drawProfile()" class="fas fa-cog icon-cog"></i>`
+  document.getElementById("user-controls").innerHTML = `<i id="mdlBtn" onclick="app.controllers.user.drawProfile()" class="fas fa-cog icon-cog"></i>`
 }
 
 export default class UserController {
- constructor() {
- }
+  constructor() {
+  }
 
- login(e) {
-  e.preventDefault();
-  store.login(e.target, draw)
-}
+  login(e) {
+    e.preventDefault();
+    store.login(e.target, draw)
+  }
 
-register(e) {
-  e.preventDefault();
-  store.register(e.target, draw)
-}
+  register(e) {
+    e.preventDefault();
+    store.register(e.target, draw)
+  }
 
-drawProfile(){
-let user = store.state.user
+  drawProfile() {
+    let user = store.state.user
 
-}
+  }
 
 }
