@@ -14,7 +14,7 @@ function draw() {
   //  </div>
   //  `
   document.getElementById("username-title").innerHTML = `<b>${store.state.user.username}!</b>`
-  document.getElementById("user-controls").innerHTML = `<i id="mdlBtn" onclick="app.controllers.user.drawProfile()" class="fas fa-cog icon-cog"></i>`
+  document.getElementById("user-controls").innerHTML = `<i onclick="app.controllers.user.drawProfile()" class="fas fa-cog icon-cog"></i>`
 }
 
 export default class UserController {
@@ -33,7 +33,7 @@ export default class UserController {
 
   drawProfile() {
     let user = store.state.user
-
+    document.querySelector('.profile-modal').style.display = 'block'
   }
 
 }
