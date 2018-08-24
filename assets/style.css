@@ -1,3 +1,9 @@
+/* Colors:
+Light blue - #B6E1E0
+Darker light blue - #9cd3d3
+Orange - #e8630a
+Navy - 2B4353 */
+
 .header {
   background-color: #B6E1E0;
   color: white;
@@ -9,6 +15,7 @@
 
 .logo-text {
   font-family: 'Lobster', cursive;
+  width: fit-content;
   font-size: 3.5rem;
   padding-right: 5%;
   padding-top: 1%;
@@ -45,4 +52,8 @@
   padding: 0.5% 1% 0.5% 1%;
   font-weight: bold;
   box-shadow: 2px 2px 2px black;
+}
+
+.fa-plus {
+  color: #9cd3d3;
 }
