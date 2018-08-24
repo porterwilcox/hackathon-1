@@ -19,9 +19,9 @@
     <div class="logo-text">Post-It</div>
   </header>
   <div id="user-info" class="user-info px-5 py-2">Hello, <span id="username-title">guest!</span> Please login &#160;<i data-toggle="collapse" role="button" href="#login-form" type="button" class="far fa-edit"></i>
-    &#160; or register &#160;<i data-toggle="collapse" role="button" href="#register-form" type="button" class="fas fa-sign-in-alt"></i>&#160;
+    &#160; or register &#160;<i data-toggle="collapse" role="button" href="#login-register-form" type="button" class="fas fa-sign-in-alt"></i>&#160;
     </div>
-    <form id="login-form" class="collapse" onsubmit="app.controllers.user.login(event)">
+    <form id="login-form" class="collapse show" onsubmit="app.controllers.user.login(event)">
       <input type="text" name="username" required placeholder="username" autocomplete="false" autofocus>
       <input type="password" name="password" required placeholder="password" autocomplete="false">
       <button type="submit">login</button>

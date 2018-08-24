@@ -48,20 +48,16 @@ export default class Store {
         draw()
       })
   }
-  login(cred, draw) {
-    fetch('/auth/login', {
-      method: 'post',
-      body: JSON.stringify(cred),
-      headers: {
-        "Content-Type": "application/json; charset=utf-8",
-      },
+  login(userData, callback) {
+    postItApi.post("/login", {
+      username: userData.username.value,
+      password: userData.password.value
     })
-      .then(res => res.json())
-      .then(data => {
-        setState('user', new User(data))
-        draw()
-      })
-      .catch(console.error)
+    .then(res => {
+      setState('user', new User(res.data))
+      callback()
+    })
+    .catch(console.error)
   }
   register(userData, callback) {
     console.log(userData)
