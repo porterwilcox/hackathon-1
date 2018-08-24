@@ -19,13 +19,13 @@
     <div class="logo-text">Post-It</div>
   </header>
   <div class="accordion" id="login-register">
-    <div id="user-info" class="user-info px-5 py-2">Hello, <span id="username-title">guest!</span><span id="user-controls"> Please login &#160;<i
-        data-toggle="collapse" role="button" href="#login-form" type="button" class="far fa-edit"></i>
-      &#160; or register &#160;<i data-toggle="collapse" role="button" href="#register-form" type="button" class="fas fa-sign-in-alt"></i>&#160;</span>
+    <div id="user-info" class="user-info px-5 py-2">Hello, <span id="username-title">guest!</span><span id="user-controls">
+      Please login &#160;<i data-toggle="collapse" role="button" href="#login-form" type="button" class="far fa-edit"></i>
+        &#160; or register &#160;<i data-toggle="collapse" role="button" href="#register-form" type="button" class="fas fa-sign-in-alt"></i>&#160;</span>
     </div>
     <div class="profile-modal">
       <div id="profile-modal-content">
-        
+
       </div>
     </div>
     <div class="top-row">
@@ -42,7 +42,7 @@
         </form>
         <form id="register-form" class="collapse" data-parent="#login-register" onsubmit="app.controllers.user.register(event)">
           <input type="text" name="username" required placeholder="username" autocomplete="false">
-          <input type="text" name="password" required placeholder="password" autocomplete="false">
+          <input type="password" name="password" required placeholder="password" autocomplete="false">
           <button class="btn default-button" type="submit">register</button>
         </form>
       </div>
