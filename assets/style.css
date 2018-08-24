@@ -27,7 +27,22 @@
   color: white;
   display: flex;
   margin: 1% 2% 1% 2%;
-  padding: 1% 1% 1% 1%;
+  padding: 0.5% 1% 0.5% 1%;
+  font-weight: bold;
+  box-shadow: 2px 2px 2px black;
+  align-items: center;
+}
+
+.expand-button {
+  background-color: #2B4353
+}
+
+.post-body {
+  background-color: #B6E1E0;
+  color: white;
+  display: flex;
+  margin: 1% 4% 1% 4%;
+  padding: 0.5% 1% 0.5% 1%;
   font-weight: bold;
   box-shadow: 2px 2px 2px black;
 }
