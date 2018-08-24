@@ -62,3 +62,13 @@ body form {
 .fa-plus {
   color: #9cd3d3;
 }
+.icon-cog{
+  color: rgb(70, 70, 70);
+}
+
+.profile-modal{
+  display: none;
+  position: fixed;
+  z-index: 2;
+  
+}
