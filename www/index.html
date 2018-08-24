@@ -23,18 +23,25 @@
         data-toggle="collapse" role="button" href="#login-form" type="button" class="far fa-edit"></i>
       &#160; or register &#160;<i data-toggle="collapse" role="button" href="#register-form" type="button" class="fas fa-sign-in-alt"></i>&#160;
     </div>
+    <div class="top-row">
 
-    <form id="login-form" class="collapse show" data-parent="#login-register" onsubmit="app.controllers.user.login(event)">
-      <input type="text" name="username" required placeholder="username" autocomplete="false" autofocus>
-      <input type="password" name="password" required placeholder="password" autocomplete="false">
-      <button type="submit">login</button>
-    </form>
-    <form id="register-form" class="collapse" data-parent="#login-register" onsubmit="app.controllers.user.register(event)">
-      <input type="text" name="username" required placeholder="username" autocomplete="false">
-      <input type="text" name="password" required placeholder="password" autocomplete="false">
-      <button type="submit">register</button>
-    </form>
+      <div class="button-column">
+        <button class="btn post-button mt-1">New Post</button>
+      </div>
 
+      <div class="form-column">
+        <form id="login-form" class="collapse show" data-parent="#login-register" onsubmit="app.controllers.user.login(event)">
+          <input type="text" name="username" required placeholder="username" autocomplete="false" autofocus>
+          <input type="password" name="password" required placeholder="password" autocomplete="false">
+          <button type="submit">login</button>
+        </form>
+        <form id="register-form" class="collapse" data-parent="#login-register" onsubmit="app.controllers.user.register(event)">
+          <input type="text" name="username" required placeholder="username" autocomplete="false">
+          <input type="text" name="password" required placeholder="password" autocomplete="false">
+          <button type="submit">register</button>
+        </form>
+      </div>
+    </div>
   </div>
   <div id="posts" class="post-head"><button class="btn expand-button mr-3" data-toggle="collapse" role="button" href="#post-content"><i
         class="fas fa-plus"></i></button>This is a test of a post title!</div>
