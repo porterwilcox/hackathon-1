@@ -24,13 +24,11 @@ export default class UserController {
   login(e) {
     e.preventDefault();
     store.login(e.target, draw)
-    document.getElementById('login-form').style.display = 'none'
   }
 
   register(e) {
     e.preventDefault();
     store.register(e.target, draw)
-    document.getElementById('register-form').style.display = 'none'
   }
 
   drawProfile() {

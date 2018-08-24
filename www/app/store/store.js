@@ -53,11 +53,12 @@ export default class Store {
       username: userData.username.value,
       password: userData.password.value
     })
-    .then(res => {
-      setState('user', new User(res.data))
-      callback()
-    })
-    .catch(console.error)
+      .then(res => {
+        setState('user', new User(res.data))
+        callback()
+        document.getElementById('login-form').style.display = 'none'
+      })
+      .catch(console.error)
   }
   register(userData, callback) {
     console.log(userData)
@@ -67,10 +68,12 @@ export default class Store {
       username: userData.username.value,
       password: userData.password.value
     })
-    .then(res => {
-      setState('user', new User(res.data))
-      callback()
-    })
-    .catch(console.error)
+      .then(res => {
+        setState('user', new User(res.data))
+        callback()
+        document.getElementById('register-form').style.display = 'none'
+
+      })
+      .catch(console.error)
   }
 }
