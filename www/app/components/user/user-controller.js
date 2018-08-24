@@ -13,7 +13,7 @@ function draw() {
   //    <div id="posts"></div>
   //  </div>
   //  `
-  document.getElementById("username-title").innerHTML = ` ${store.state.user.username}! `
+  document.getElementById("username-title").innerHTML = `<b>${store.state.user.username}!</b>`
 }
 
 export default class UserController {
@@ -22,12 +22,7 @@ export default class UserController {
 
  login(e) {
   e.preventDefault();
-  console.log(e.target)
-  // let creds = {
-  //  username: e.target.username.value,
-  //  password: e.target.password.value
-  // }
-  // store.login(creds, draw)
+  store.login(e.target, draw)
 }
 
 register(e) {

@@ -18,6 +18,7 @@
   <header class="header">
     <div class="logo-text">Post-It</div>
   </header>
+<<<<<<< HEAD
   <div id="user-info" class="user-info px-5 py-2">Hello, <span id="username-title">guest!</span> Please login &#160;<i data-toggle="collapse"
       role="button" href="#login-form" type="button" class="far fa-edit"></i>
     &#160; or register &#160;<i data-toggle="collapse" role="button" href="#register-form" type="button" class="fas fa-sign-in-alt"></i>&#160;
@@ -34,6 +35,21 @@
     <button type="submit">register</button>
   </form>
 
+=======
+  <div id="user-info" class="user-info px-5 py-2">Hello, <span id="username-title">guest!</span> Please login &#160;<i data-toggle="collapse" role="button" href="#login-form" type="button" class="far fa-edit"></i>
+    &#160; or register &#160;<i data-toggle="collapse" role="button" href="#login-register-form" type="button" class="fas fa-sign-in-alt"></i>&#160;
+    </div>
+    <form id="login-form" class="collapse show" onsubmit="app.controllers.user.login(event)">
+      <input type="text" name="username" required placeholder="username" autocomplete="false" autofocus>
+      <input type="password" name="password" required placeholder="password" autocomplete="false">
+      <button type="submit">login</button>
+    </form>
+    <form id="register-form" class="collapse" onsubmit="app.controllers.user.register(event)">
+        <input type="text" name="username" required placeholder="username" autocomplete="false">
+        <input type="text" name="password" required placeholder="password" autocomplete="false">
+        <button type="submit">register</button>
+      </form>
+>>>>>>> b150d54e56aca329d8ac8ee9f517f5e78152fb9e
   <div id="posts" class="post-head"><button class="btn expand-button mr-3" data-toggle="collapse" role="button" href="#post-content"><i
         class="fas fa-plus"></i></button>This is a test of a post title!</div>
   <div id="post-content" class="collapse post-body">This is unplanned it really just happens. It is a lot of fun. This is
