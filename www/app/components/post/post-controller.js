@@ -13,4 +13,8 @@ export default class PostConroller {
   store.getPosts(draw)
  }
 
+ drawPost() {
+  let post = store.state.post
+  document.querySelector('.post-modal').style.display = 'block'
+ }
 }
