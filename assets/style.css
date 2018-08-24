@@ -4,7 +4,6 @@
   height: 2%;
   display: flex;
   flex-direction: row-reverse;
-  box-shadow: 2px 2px 2px grey;
 }
 
 .logo-text {
@@ -13,4 +12,11 @@
   padding-right: 5%;
   padding-top: 1%;
   padding-bottom: 1%;
+}
+
+.user-info{
+  display: flex;
+  flex-direction: row-reverse;
+  background-color: #9cd3d3;
+  box-shadow: 2px 2px 2px grey;
 }
