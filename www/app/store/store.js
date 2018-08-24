@@ -12,8 +12,8 @@ let store
 
 let state = {
   user: {},
-  post: {},
-  comment: {}
+  post: [],
+  comment: []
 }
 function setState(prop, data) {
   state[prop] = data
@@ -71,6 +71,10 @@ export default class Store {
       username: userData.username.value,
       password: userData.password.value
     })
-    .then(res => console.log(res))
+    .then(res => {
+      setState('user', new User(res.data))
+      callback()
+    })
+    .catch(console.error)
   }
 }
