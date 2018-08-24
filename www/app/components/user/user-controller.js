@@ -24,16 +24,23 @@ export default class UserController {
   login(e) {
     e.preventDefault();
     store.login(e.target, draw)
+    document.getElementById('login-form').style.display = 'none'
   }
 
   register(e) {
     e.preventDefault();
     store.register(e.target, draw)
+    document.getElementById('register-form').style.display = 'none'
   }
 
   drawProfile() {
     let user = store.state.user
     document.querySelector('.profile-modal').style.display = 'block'
   }
+}
 
+window.onclick = function(event){
+  if(event.target == document.querySelector('.profile-modal')){
+    document.querySelector('.profile-modal').style.display = 'none'
+  }
 }
