@@ -19,7 +19,7 @@ export default class Store {
     fetch('api/posts/by-user/' + state.user._id)
       .then(res => res.json())
       .then(data => {
-        setState('posts', data.map(goal => new Post(post)))
+        setState('posts', data.map(post => new Post(post)))
         draw()
       })
   }
@@ -27,7 +27,7 @@ export default class Store {
     fetch('api/comments/by-user/' + state.user._id)
       .then(res => res.json())
       .then(data => {
-        setState('comments', data.map(goal => new Comment(comment)))
+        setState('comments', data.map(comment => new Comment(comment)))
         draw()
       })
   }
