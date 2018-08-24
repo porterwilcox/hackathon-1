@@ -10,7 +10,7 @@ Navy - 2B4353 */
   text-shadow: 2px 2px 2px #2b4353;
   height: 2%;
   display: flex;
-  flex-direction: row-reverse;
+  justify-content: flex-end;
 }
 
 .logo-text {
@@ -24,7 +24,7 @@ Navy - 2B4353 */
 
 .user-info{
   display: flex;
-  flex-direction: row-reverse;
+  justify-content: flex-end;
   background-color: #9cd3d3;
   box-shadow: 2px 2px 2px grey;
 }
