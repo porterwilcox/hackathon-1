@@ -12,6 +12,10 @@ let schema = new Schema({
     password: {
         type: String,
         required: true
+    },
+    userImg: {
+        type: String,
+        default: "//placehold.it/100x100"
     }
 })
 
