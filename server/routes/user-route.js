@@ -1,6 +1,13 @@
 let router = require("express").Router()
 let Users = require("../models/user")
 
+router.get("/users", (req, res, next) => {
+    Users.find({})
+        .then(users => {
+            return res.send(users)
+        })
+        .catch(next)
+})
 router.post("/login", (req, res, next) => {
     Users.findOne({
         username: req.body.username,

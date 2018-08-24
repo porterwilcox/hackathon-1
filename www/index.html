@@ -21,15 +21,15 @@
   <div id="user-info" class="user-info px-5 py-2">Hello, guest! Please login &#160;<i data-toggle="collapse" role="button" href="#login-form" type="button" class="far fa-edit"></i>
     &#160; or register &#160;<i data-toggle="collapse" role="button" href="#register-form" type="button" class="fas fa-sign-in-alt"></i>&#160;
     </div>
-    <form id="login-form" class="collapse">
-      <input type="text" name="username" required placeholder="username">
-      <input type="text" name="password" required placeholder="password">
-      <button onclick="app.controllers.user.getUser(event)">login</button>
+    <form id="login-form" class="collapse" onsubmit="app.controllers.user.login(event)">
+      <input type="text" name="username" required placeholder="username" autocomplete="false" autofocus>
+      <input type="password" name="password" required placeholder="password" autocomplete="false">
+      <button type="submit">login</button>
     </form>
-    <form id="register-form" class="collapse">
-        <input type="text" name="username" required placeholder="username">
-        <input type="text" name="password" required placeholder="password">
-        <button onclick="app.controllers.user.registerUser(event)">register</button>
+    <form id="register-form" class="collapse" onsubmit="app.controllers.user.register(event)">
+        <input type="text" name="username" required placeholder="username" autocomplete="false">
+        <input type="text" name="password" required placeholder="password" autocomplete="false">
+        <button type="submit">register</button>
       </form>
   <div id="posts" class="post-head"><button class="btn expand-button mr-3" data-toggle="collapse" role="button" href="#post-content"><i
         class="fas fa-plus"></i></button>This is a test of a post title!</div>
@@ -57,6 +57,7 @@
 
 
   <script src="app/main.js" type="module"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>

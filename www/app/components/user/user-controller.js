@@ -22,12 +22,17 @@ export default class UserController {
 
  login(e) {
   e.preventDefault();
-  let creds = {
-   username: e.target.username.value,
-   pin: e.target.pin.value
-  }
-  store.login(creds, draw)
+  console.log(e.target)
+  // let creds = {
+  //  username: e.target.username.value,
+  //  password: e.target.password.value
+  // }
+  // store.login(creds, draw)
+}
 
- }
+register(e) {
+  e.preventDefault();
+  store.register(e.target, draw)
+}
 
 }

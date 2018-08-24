@@ -3,6 +3,9 @@ let bp = require('body-parser')
 require('./db/db-config')
 let port = 3000
 let server = express()
+let cors = require("cors")
+
+server.use(cors())
 server.use(bp.json())
 server.use(bp.urlencoded({
     extended: true
