@@ -18,14 +18,19 @@ export default class CommentController {
     }
     let username = store.state.user.username
     document.querySelector(".comment-modal").style.display = "block"
+    let template = `
+    <form id="post" class="d-flex justify-content-center align-items-center flex-column post-modal-height" onsubmit="app.controllers.comment.postComment(event, '${postId}')">
+      <textarea type="text" class="large-input" name="content" placeholder="Please type your comment here"></textarea>
+      <button class="btn new-post-button mt-1">Make New Coment</button>
+    </form>
+    `
+    document.getElementById("comment-modal-content").innerHTML = template
   }
 
-  postComment(e) {
+  postComment(e, postId) {
     e.preventDefault();
-    console.log(e)
     let username = store.state.user.username
-    console.log(username)
-    store.postComment(e.target, username, draw)
+    store.postComment(e.target, username, postId, draw)
   }
 
 }

@@ -67,8 +67,19 @@ export default class Store {
         draw(postId)
       })
   }
-  postComment(target, username, draw) {
+  postComment(target, username, postId, draw) {
+    postItApi.post('/comments', {
+      username: username,
+      content: target.content.value,
+      postId: postId
+    })
+    .then(res => {
+      console.log(username)
+      this.getComments(postId, draw)
+      document.querySelector('.comment-modal').style.display = 'none'
 
+    })
+    .catch(console.error)
   }
   login(userData, callback) {
     postItApi.post("/login", {
