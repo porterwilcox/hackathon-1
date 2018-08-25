@@ -9,7 +9,7 @@ export default class Comment {
 
   get listComment() {
     return `
-  ${this.content} 
+  <div class="my-1 comment-bg">${this.content}</div> 
   `
   }
 }

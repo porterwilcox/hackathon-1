@@ -230,3 +230,8 @@ body form {
   justify-content: space-between;
   width: 100%;
 }
+
+.comment-bg{
+  background-color: #e8630a;
+  padding-top: 0.5%;
+}
