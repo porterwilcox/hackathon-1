@@ -110,11 +110,11 @@ body form {
   background-color: rgba(0, 0, 0, 0.74)
 }
 #post-modal-content{
-  background-color: rgb(255, 255, 255);
+  background-color: #2B4353;
   border-radius: 2%;
   margin: auto;
   width: 70vw;
   height: 70vh;
-  border: 10px solid white;
-  box-shadow: rgb(70, 70, 70);
+  border: 7px solid white;
+  box-shadow: 0 0 97px 13px rgb(0, 0, 0);
 }
