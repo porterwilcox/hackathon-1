@@ -67,6 +67,9 @@ export default class Store {
         draw(postId)
       })
   }
+  postComment(target, username, draw) {
+
+  }
   login(userData, callback) {
     postItApi.post("/login", {
       username: userData.username.value,

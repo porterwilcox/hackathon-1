@@ -12,13 +12,22 @@ export default class CommentController {
   getComments(postId) {
     store.getComments(postId, draw)
   }
-  commentModal(postId){
-    if (!store.state.user.hasOwnProperty("username")){
+  commentModal(postId) {
+    if (!store.state.user.hasOwnProperty("username")) {
       return alert("Please login or sign up to make comments")
     }
     let username = store.state.user.username
     document.querySelector(".comment-modal").style.display = "block"
   }
+
+  postComment(e) {
+    e.preventDefault();
+    console.log(e)
+    let username = store.state.user.username
+    console.log(username)
+    store.postComment(e.target, username, draw)
+  }
+
 }
 document.querySelector(".comment-modal").onclick = function (event) {
   if (event.target == document.querySelector('.comment-modal')) {
