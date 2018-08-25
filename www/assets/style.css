@@ -126,6 +126,10 @@ body form {
 
 .icon-cog {
   color: rgb(78, 78, 78);
+  cursor: pointer;
+  margin-right: -25px;
+  margin-left: 15px;
+  font-size: 1.4em;
 }
 
 .new-post-button {
@@ -153,11 +157,6 @@ body form {
   height: 68vh;
 }
 
-.icon-trash {
-  font-size: 2.7rem;
-  cursor: pointer;
-}
-
 .icon-trash:hover {
   color: rgb(128, 0, 0);
 }
@@ -172,7 +171,8 @@ body form {
 }
 .profile-settings-img {
   height: 100%;
-  width: 90%;
+  width: 100%;
+  border-radius: 3%;
 }
 .h80 {
   height: 80%;
@@ -188,11 +188,19 @@ body form {
   display: flex;
   height: 100%;
   width: 100%;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  top: 5rem;
 }
 .user-delete h1{
   font-size: 2.8rem;
+  color: white;
+  top: 2.5rem;
 }
-
+.icon-trash {
+  font-size: 2.7rem;
+  cursor: pointer;
+}
 .username {
   font-weight: 100;
 }
