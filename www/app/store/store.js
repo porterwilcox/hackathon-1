@@ -33,8 +33,9 @@ export default class Store {
     })
       .then(res => {
         console.log(res)
-        setState('post', new Post(res.data, userId))
-        draw()
+        this.getPosts(draw)
+        document.querySelector('.post-modal').style.display = 'none'
+
       })
       .catch(console.error)
   }
