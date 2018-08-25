@@ -31,9 +31,9 @@ router.post("/register", (req, res, next) => {
         })
         .catch(next)
 })
-router.delete("/:id", (req, res, next) => {
+router.delete("/users/:id", (req, res, next) => {
     Users.findByIdAndRemove(req.params.id)
-    .then(res => res.send({
+    .then(() => res.send({
         message: "Deletron Delta"
     }))
     .catch(next)
