@@ -1,8 +1,12 @@
 export default class Post {
   constructor(data) {
     this._id = data._id
-    this.description = data.description
     this.userId = data.userId
+    this.timestamp = data.timestamp
+    this.voteCount = data.voteCount
+    this.content = data.content
+    this.imgUrl = data.imgUrl
+    this.title = data.title
   }
 
   get listTemplate() {

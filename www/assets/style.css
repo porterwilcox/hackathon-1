@@ -138,9 +138,14 @@ body form {
 .large-input {
   width: 70%;
   padding: 12px 20px;
-  height: 50%;
+  float: right;
+  height: 30vh;
   margin: 8px 0;
   box-sizing: border-box;
+}
+
+.post-modal-height{
+  height: 68vh;
 }
 
 .icon-trash{
@@ -149,4 +154,3 @@ body form {
 }
 .icon-trash:hover{
   color: rgb(128, 0, 0);
-}

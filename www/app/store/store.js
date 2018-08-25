@@ -21,6 +21,10 @@ function setState(prop, data) {
 }
 
 export default class Store {
+  postPost(postData, draw) {
+    let post = new Post(postData)
+    console.log(post)
+  }
   constructor() {
     if (store) {
       return store

@@ -18,8 +18,10 @@ let schema = new Schema({
         required: true
     },
     content: {
-        type: Object,
-        required: true
+        type: String
+    },
+    imgUrl: {
+        type: String
     },
     title: {
         type: String,
