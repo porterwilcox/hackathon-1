@@ -60,12 +60,12 @@ export default class Store {
         draw()
       })
   }
-  getComments(draw) {
-    fetch('api/comments/by-user/' + state.user._id)
-      .then(res => res.json())
+  getComments(postId, draw) {
+    postItApi.get("/comments")
       .then(data => {
-        setState('comments', data.map(comment => new Comment(comment)))
-        draw()
+        console.log('comment test' + data)
+        setState('comments', data.data.map(comment => new Comment(comment)))
+        draw(postId)
       })
   }
   login(userData, callback) {
