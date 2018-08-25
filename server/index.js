@@ -18,7 +18,7 @@ let postRoutes = require('./routes/post-route')
 let userRoutes = require('./routes/user-route')
 
 server.use(userRoutes)
-server.use('/posts' postRoutes)
+server.use('/posts', postRoutes)
 server.use('/comments', commentRoutes)
 
 
