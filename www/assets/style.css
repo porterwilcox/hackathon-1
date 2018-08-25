@@ -187,3 +187,9 @@ body form {
 .username {
   font-weight: 100;
 }
+
+.comment-button {
+  background-color: #e8630a;
+  color: #ffffff;
+  width: 20%;
+}

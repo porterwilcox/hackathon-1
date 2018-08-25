@@ -17,7 +17,7 @@ export default class Post {
   <div class="username">${this.username}</div>
   <div class="username">${this.timestamp}</div>
   ${this.content}
-  <button class="btn default-button">login</button>
+  <button class="btn comment-button">Comment</button>
 </div>
   `
   }
