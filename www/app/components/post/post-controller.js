@@ -20,6 +20,7 @@ export default class PostConroller {
 
 
 }
+
 window.onclick = function (event) {
   if (event.target == document.querySelector('.post-modal')) {
     document.querySelector('.post-modal').style.display = 'none'
