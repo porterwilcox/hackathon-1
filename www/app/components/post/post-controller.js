@@ -3,9 +3,9 @@ import Store from "../../store/store.js";
 let store = new Store()
 
 function draw() {
-  let template = ''
-  store.state.posts.forEach(post => template += post.listTemplate)
-  document.getElementById('posts').innerHTML = template
+  // let template = ''
+  // store.state.posts.forEach(post => template += post.listTemplate)
+  // document.getElementById('posts').innerHTML = template
 }
 
 export default class PostConroller {
@@ -20,7 +20,10 @@ export default class PostConroller {
 
   postPost(e) {
     e.preventDefault();
-    store.postPost(e.target, draw)
+    console.log(e)
+    let userId = store.state.user._id
+    console.log(userId)
+    store.postPost(e.target, userId, draw)
   }
 }
 

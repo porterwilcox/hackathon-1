@@ -1,7 +1,7 @@
 export default class Post {
-  constructor(data) {
+  constructor(data, userId) {
     this._id = data._id
-    this.userId = data.userId
+    this.userId = userId
     this.timestamp = data.timestamp
     this.voteCount = data.voteCount
     this.content = data.content

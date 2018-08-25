@@ -1,7 +1,7 @@
 let router = require('express').Router()
 let Posts = require('../models/post')
 
-router.get('/', (req, res, next) => {
+router.get('/posts', (req, res, next) => {
     Posts.find({})
         .then(posts => {
             return res.send(posts)
@@ -10,7 +10,7 @@ router.get('/', (req, res, next) => {
 })
 
 
-router.post('/', (req, res, next) => {
+router.post('/posts', (req, res, next) => {
     Posts.create(req.body)
         .then(post => {
             return res.send(post)

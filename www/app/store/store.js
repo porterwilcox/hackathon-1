@@ -7,6 +7,7 @@ const postItApi = axios.create({
   baseURL: `//localhost:3000`,
   timeout: 3000
 })
+let time = new Date()
 
 let store
 
@@ -21,9 +22,21 @@ function setState(prop, data) {
 }
 
 export default class Store {
-  postPost(postData, draw) {
-    let post = new Post(postData)
-    console.log(post)
+  postPost(postData, userId, draw) {
+    postItApi.post("/posts", {
+      userId: userId,
+      timestamp: time.getTime(),
+      voteCount: 0,
+      content: postData.content.value,
+      imgUrl: postData.imgUrl.value,
+      title: postData.title.value
+    })
+      .then(res => {
+        console.log(res)
+        setState('post', new Post(res.data, userId))
+        draw()
+      })
+      .catch(console.error)
   }
   constructor() {
     if (store) {
