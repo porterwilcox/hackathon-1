@@ -127,3 +127,17 @@ body form {
   background-color: #e8630a;
   color: #ffffff;
 }
+
+.simple-input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+.large-input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
