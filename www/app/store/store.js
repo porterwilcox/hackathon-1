@@ -96,6 +96,9 @@ export default class Store {
       })
       .catch(console.error)
   }
+  updateUser(userData, drawProfile){
+    console.log(userData.userImg.value)
+  }
   deleteUser(userId){
     postItApi.delete(`/users/${userId}`)
   }

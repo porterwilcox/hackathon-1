@@ -43,7 +43,7 @@ export default class UserController {
     <div class="row profile-settings">
       <div class="col-6 profile-img">
         <img src="${user.userImg}" alt="profile picture" />
-        <form onsubmit="">
+        <form onsubmit="app.controllers.user.updateUser(event)">
         <input type="url" name="userImg" placeholder="Image Address" required>
         <button type="submit" class="default-button">Submit</button>
         </form>
@@ -55,6 +55,12 @@ export default class UserController {
     </div>
     `
     document.getElementById('profile-modal-content').innerHTML = template
+  }
+
+  updateUser(e){
+    e.preventDefault()
+    console.log(e)
+    store.updateUser(e.target, this.drawProfile)
   }
 
   deleteUser(){

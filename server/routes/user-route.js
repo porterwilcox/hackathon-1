@@ -31,6 +31,12 @@ router.post("/register", (req, res, next) => {
         })
         .catch(next)
 })
+router.put("/users/:id", (req, res, next) => {
+    Users.findByIdAndUpdate(req.params.id, req.body)
+        .then(() => res.send({
+            message: "update worked!"
+        }))
+})
 router.delete("/users/:id", (req, res, next) => {
     Users.findByIdAndRemove(req.params.id)
     .then(() => res.send({
