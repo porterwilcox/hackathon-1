@@ -12,15 +12,19 @@ export default class Post {
 
   get listTemplate() {
     return `
-  <div id="posts" class="post-head"><button class="btn expand-button mr-3" data-toggle="collapse" role="button" href="#${this._id}"><i class="fas fa-plus"></i></button>${this.title}</div>
+  <div id="posts" class="post-head"><button class="btn expand-button mr-3" data-toggle="collapse" role="button" href="#${this._id}"><i class="fas fa-plus"></i></button>${this.voteCount}  ${this.title}</div>
   <div id="${this._id}" class="collapse post-body flex-column">
   <div class="username">${this.username}</div>
   <div class="username">${this.timestamp}</div>
   <div><img src=${this.imgUrl}></div>
   ${this.content}
-  <button class="btn comment-button">Comment</button>
+  <button class="btn up-post-button my-1">UpPost</button>
+  <button class="btn down-post-button my-1">DownPost</button>
+  <button class="btn comment-button my-1">Comment</button>
 </div>
   `
   }
+
+
 
 }
