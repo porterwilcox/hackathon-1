@@ -106,15 +106,17 @@ export default class Store {
     postItApi.delete(`/users/${userId}`)
   }
 
-  upPostPost(voteCount, userId) {
-    postItApi.put(`/posts/${userId}`, {
-      voteCount: voteCount++
-    })
+  upPostPost(voteCount, postId) {
+    let post = {
+      voteCount: voteCount += 1
+    }
+    postItApi.put(`/posts/${postId}`, post)
   }
 
-  downPostPost(voteCount, userId) {
-    postItApi.put(`/posts/${userId}`, {
-      voteCount: voteCount--
-    })
+  downPostPost(voteCount, postId) {
+    let post = {
+      voteCount: voteCount -= 1
+    }
+    postItApi.put(`/posts/${postId}`, post)
   }
 }
