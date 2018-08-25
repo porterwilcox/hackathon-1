@@ -34,7 +34,8 @@ router.post("/register", (req, res, next) => {
 router.put("/users/:id", (req, res, next) => {
     Users.findByIdAndUpdate(req.params.id, req.body)
         .then(() => res.send({
-            message: "update worked!"
+            message: "update worked!",
+            userImg: req.body.userImg
         }))
 })
 router.delete("/users/:id", (req, res, next) => {

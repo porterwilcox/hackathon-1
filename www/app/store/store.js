@@ -73,13 +73,13 @@ export default class Store {
       content: target.content.value,
       postId: postId
     })
-    .then(res => {
-      console.log(username)
-      this.getComments(postId, draw)
-      document.querySelector('.comment-modal').style.display = 'none'
+      .then(res => {
+        console.log(username)
+        this.getComments(postId, draw)
+        document.querySelector('.comment-modal').style.display = 'none'
 
-    })
-    .catch(console.error)
+      })
+      .catch(console.error)
   }
   login(userData, callback) {
     postItApi.post("/login", {
@@ -113,7 +113,10 @@ export default class Store {
     postItApi.put(`/users/${userId}`, {
       userImg: imgData.userImg.value
     })
-    drawProfile()
+      .then(res => {
+        setState('user', new User({ ...state.user, userImg: res.data.userImg }))
+        drawProfile()
+      })
   }
   deleteUser(userId) {
     postItApi.delete(`/users/${userId}`)
