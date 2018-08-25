@@ -42,7 +42,7 @@ export default class UserController {
     let template = `
     <div class="row">
       <div class="col-6">
-        <img src="userImg" alt="profile picture" />
+        <img src="${user.userImg}" alt="profile picture" />
         <form onsubmit="">
         <input type="url" name="userImg" placeholder="Image Address" required>
         <button type="submit" class="default-button">Submit</button>
