@@ -170,7 +170,16 @@ body form {
   flex-flow: wrap column;
   align-items: center;
 }
-
+.profile-settings-img {
+  height: 100%;
+  width: 90%;
+}
+.h80 {
+  height: 80%;
+}
+.w100 {
+  width: 100%;
+}
 .profile-settings {
   height: 100%;
 }
