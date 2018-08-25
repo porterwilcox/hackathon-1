@@ -100,3 +100,21 @@ body form {
   border: 10px solid white;
   box-shadow: rgb(70, 70, 70);
 }
+
+.post-modal{
+  display: none;
+  z-index: 2;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.74)
+}
+#post-modal-content{
+  background-color: rgb(255, 255, 255);
+  border-radius: 2%;
+  margin: auto;
+  width: 70vw;
+  height: 70vh;
+  border: 10px solid white;
+  box-shadow: rgb(70, 70, 70);
+}
