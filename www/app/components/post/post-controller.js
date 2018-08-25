@@ -14,7 +14,9 @@ export default class PostConroller {
   }
 
   drawPost() {
-    let post = store.state.post
+    if(!store.state.user.hasOwnProperty('username')){
+     return alert("please login or sign up to make posts")
+    }
     document.querySelector('.post-modal').style.display = 'block'
   }
 
