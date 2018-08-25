@@ -16,7 +16,7 @@ let schema = new Schema({
     },
     timestamp: {
         type: String,
-        required: true
+        // required: true
     },
     // voteCount: {
     //     type: Number,
