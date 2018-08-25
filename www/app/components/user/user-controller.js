@@ -50,12 +50,17 @@ export default class UserController {
       </div>
       <div class="col-6 user-delete">
         <h1>${user.username}</h1>
-        <i class="icon-trash fas fa-trash-alt" data-toggle="tooltip" data-placement="bottom" title="Delete User Account"></i>
-
+        <i onclick="app.controllers.user.deleteUser()" class="icon-trash fas fa-trash-alt" data-toggle="tooltip" data-placement="bottom" title="Delete User Account"></i>
       </div>
     </div>
     `
     document.getElementById('profile-modal-content').innerHTML = template
+  }
+
+  deleteUser(){
+    let userId = store.state.user._id
+    store.deleteUser(userId)
+    location.reload()
   }
 }
 

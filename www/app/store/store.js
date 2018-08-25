@@ -96,4 +96,7 @@ export default class Store {
       })
       .catch(console.error)
   }
+  deleteUser(userId){
+    postItApi.delete(`/users/${userId}`)
+  }
 }
