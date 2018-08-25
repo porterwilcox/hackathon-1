@@ -96,10 +96,13 @@ export default class Store {
       })
       .catch(console.error)
   }
-  updateUser(userData, drawProfile){
-    console.log(userData.userImg.value)
+  updateUser(imgData, userId, drawProfile) {
+    postItApi.put(`/users/${userId}`, {
+      userImg: imgData.userImg.value
+    })
+      drawProfile()
   }
-  deleteUser(userId){
+  deleteUser(userId) {
     postItApi.delete(`/users/${userId}`)
   }
 }
