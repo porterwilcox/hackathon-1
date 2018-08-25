@@ -19,7 +19,7 @@ export default class Post {
   <div><img src=${this.imgUrl}></div>
   ${this.content}
   <button class="btn up-post-button my-1" onclick="app.controllers.post.upPostPost(${this.voteCount})">UpPost</button>
-  <button class="btn down-post-button my-1" onclick="app.controllers.post.downPostPost(${this.voteCount})">DownPost</button>
+  <button class="btn down-post-button my-1" onclick="app.controllers.post.downPostPost(${this.voteCount}, ${this._id})">DownPost</button>
   <button class="btn comment-button my-1">Comment</button>
 </div>
   `

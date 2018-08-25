@@ -46,7 +46,6 @@ export default class Store {
       return store
     }
     store = this;
-    this.upPostPost = undefined;
   }
   get state() {
     return {
@@ -105,5 +104,17 @@ export default class Store {
   }
   deleteUser(userId) {
     postItApi.delete(`/users/${userId}`)
+  }
+
+  upPostPost(voteCount, userId) {
+    postItApi.put(`/posts/${userId}`, {
+      voteCount: voteCount++
+    })
+  }
+
+  downPostPost(voteCount, userId) {
+    postItApi.put(`/posts/${userId}`, {
+      voteCount: voteCount--
+    })
   }
 }

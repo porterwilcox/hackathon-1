@@ -29,12 +29,12 @@ export default class PostConroller {
     store.postPost(e.target, userId, username, draw)
   }
 
-  upPostPost(voteCount) {
-    store.upPostPost(voteCount)
+  upPostPost(voteCount, postId) {
+    store.upPostPost(voteCount, postId)
   }
 
-  downPostPost(voteCount) {
-    store.downPostPost(voteCount)
+  downPostPost(voteCount, postId) {
+    store.downPostPost(voteCount, postId)
   }
 }
 
