@@ -18,9 +18,10 @@ export default class PostConroller {
     document.querySelector('.post-modal').style.display = 'block'
   }
 
-  window.onclick = function (event) {
-    if (event.target == document.querySelector('.post-modal')) {
-      document.querySelector('.post-modal').style.display = 'none'
-    }
+
+}
+window.onclick = function (event) {
+  if (event.target == document.querySelector('.post-modal')) {
+    document.querySelector('.post-modal').style.display = 'none'
   }
 }
