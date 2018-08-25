@@ -42,8 +42,8 @@ export default class UserController {
     let template = `
     <div class="row profile-settings">
       <div class="col-6 profile-img">
-        <div class="profile-settings-img">
-          <img src="${user.userImg}" alt="profile picture" />
+        <div class="h80 w100">
+          <img class="profile-settings-img" src="${user.userImg}" alt="profile picture" />
         </div>
         <form onsubmit="app.controllers.user.updateUser(event)">
         <input type="url" name="userImg" placeholder="Image Address" required>
