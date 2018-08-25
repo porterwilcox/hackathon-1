@@ -122,3 +122,8 @@ body form {
 .icon-cog{
   color: rgb(78, 78, 78);
 }
+
+.new-post-button {
+  background-color: #e8630a;
+  color: #ffffff;
+}
