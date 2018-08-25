@@ -4,24 +4,24 @@ let schemaName = 'Comment'
 let ObjectId = Schema.Types.ObjectId
 
 let schema = new Schema({
-    userId: {
-        type: ObjectId,
+    username: {
+        type: String,
         ref: 'User',
         required: true
     },
     postId: {
         type: ObjectId,
-        ref: 'Post',
+        ref: "Post",
         required: true
     },
     timestamp: {
-        type: Number,
+        type: String,
         required: true
     },
-    voteCount: {
-        type: Number,
-        required: true
-    },
+    // voteCount: {
+    //     type: Number,
+    //     required: true
+    // },
     content: {
         type: String,
         required: true
