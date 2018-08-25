@@ -22,8 +22,9 @@ export default class PostConroller {
     e.preventDefault();
     console.log(e)
     let userId = store.state.user._id
+    let username = store.state.user.username
     console.log(userId)
-    store.postPost(e.target, userId, draw)
+    store.postPost(e.target, userId, username, draw)
   }
 }
 

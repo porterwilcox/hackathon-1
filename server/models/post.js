@@ -9,6 +9,11 @@ let schema = new Schema({
         ref: 'User',
         required: true
     },
+    username: {
+        type: String,
+        ref: 'User',
+        required: true
+    },
     timestamp: {
         type: Number,
         required: true

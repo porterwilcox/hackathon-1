@@ -54,7 +54,7 @@ body form {
 }
 
 .post-body {
-  background-color: #B6E1E0;
+  background-color: #2B4353;
   color: white;
   display: flex;
   margin: 1vh 4vw 1vh 4vw;
@@ -182,4 +182,8 @@ body form {
 }
 .user-delete h1{
   font-size: 2.8rem;
+}
+
+.username {
+  font-weight: 100;
 }

@@ -22,9 +22,10 @@ function setState(prop, data) {
 }
 
 export default class Store {
-  postPost(postData, userId, draw) {
+  postPost(postData, userId, username, draw) {
     postItApi.post("/posts", {
       userId: userId,
+      username: username,
       timestamp: time.getTime(),
       voteCount: 0,
       content: postData.content.value,
@@ -32,7 +33,7 @@ export default class Store {
       title: postData.title.value
     })
       .then(res => {
-        console.log(res)
+        console.log(username)
         this.getPosts(draw)
         document.querySelector('.post-modal').style.display = 'none'
 
