@@ -33,7 +33,7 @@ export default class UserController {
     e.preventDefault();
     store.register(e.target, draw)
     // @ts-ignore
-    document.querySelector('.profile-modal').style.display = 'block'
+   let wait = setTimeout(this.drawProfile, 1000)
   }
 
   drawProfile() {
