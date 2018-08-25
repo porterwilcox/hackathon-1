@@ -38,14 +38,12 @@ export default class UserController {
 
   drawProfile() {
     let user = store.state.user
-    // @ts-ignore
     document.querySelector('.profile-modal').style.display = 'block'
   }
 }
 
-window.onclick = function(event){
+document.querySelector(".profile-modal").onclick = function(event){
   if(event.target == document.querySelector('.profile-modal')){
-    // @ts-ignore
     document.querySelector('.profile-modal').style.display = 'none'
   }
 }
