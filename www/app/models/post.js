@@ -14,7 +14,8 @@ export default class Post {
     return `
   <div id="posts" class="post-head"><button class="btn expand-button mr-3" data-toggle="collapse" role="button" href="#${this._id}"><i class="fas fa-plus"></i></button>${this.title}</div>
   <div id="${this._id}" class="collapse post-body">
-  <div class="username">${this.username}</div>  
+  <div class="username flex-row">${this.username}</div>
+  <div class="username flex-row">${this.timestamp}</div>
   ${this.content}
 </div>
   `
