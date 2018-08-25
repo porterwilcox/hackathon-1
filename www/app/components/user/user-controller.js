@@ -27,7 +27,7 @@ export default class UserController {
   }
 
   register(e) {
-    if(e.target.password.value !== e.target.password1.value){
+    if (e.target.password.value !== e.target.password1.value) {
       return alert("please confirm password")
     }
     e.preventDefault();
@@ -39,11 +39,26 @@ export default class UserController {
   drawProfile() {
     let user = store.state.user
     document.querySelector('.profile-modal').style.display = 'block'
+    let template = `
+    <div class="row">
+      <div class="col-6">
+        <img src="${user.userImg}" alt="profile picture" />
+        <form onsubmit="">
+        <input type="url" name="userImg" placeholder="Image Address" required>
+        <button type="submit" class="default-button">Submit</button>
+        </form>
+      </div>
+      <div class="col-6">
+
+      </div>
+    </div>
+    `
+    document.getElementById('profile-modal-content').innerHTML = template
   }
 }
 
-document.querySelector(".profile-modal").onclick = function(event){
-  if(event.target == document.querySelector('.profile-modal')){
+document.querySelector(".profile-modal").onclick = function (event) {
+  if (event.target == document.querySelector('.profile-modal')) {
     document.querySelector('.profile-modal').style.display = 'none'
   }
 }
