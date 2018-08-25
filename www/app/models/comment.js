@@ -3,7 +3,7 @@ export default class Comment {
     this.username = data.username
     this.postId = data.postId
     this._id = data._id
-    this.timestamp = data.timestamp
+    // this.timestamp = data.timestamp
     this.content = data.content
   }
 

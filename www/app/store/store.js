@@ -55,7 +55,6 @@ export default class Store {
   getPosts(draw) {
     postItApi.get("/posts")
       .then(data => {
-        console.log(data)
         setState('posts', data.data.map(post => new Post(post)))
         draw()
       })
@@ -64,7 +63,7 @@ export default class Store {
     postItApi.get("/comments")
       .then(data => {
         setState('comments', data.data.map(comment => new Comment(comment)))
-        console.log('comment test' + data.data)
+        console.log('comment test', data.data)
         draw(postId)
       })
   }

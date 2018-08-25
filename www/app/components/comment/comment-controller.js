@@ -4,7 +4,7 @@ let store = new Store()
 
 function draw(postId) {
   let template = ''
-  store.state.comments.forEach(comment => template += comment.listTemplate)
+  store.state.comments.forEach(comment => template += comment.listComment)
   document.getElementById(`comments-${postId}`).innerHTML = template
 }
 
