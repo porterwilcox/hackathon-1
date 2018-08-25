@@ -60,7 +60,7 @@ export default class Store {
       })
   }
   getComments(postId, draw) {
-    postItApi.get("/comments")
+    postItApi.get(`/comments/${postId}`)
       .then(data => {
         setState('comments', data.data.map(comment => new Comment(comment)))
         console.log('comment test', data.data)
