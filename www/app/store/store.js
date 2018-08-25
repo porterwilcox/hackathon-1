@@ -106,17 +106,19 @@ export default class Store {
     postItApi.delete(`/users/${userId}`)
   }
 
-  upPostPost(voteCount, postId) {
+  upPostPost(voteCount, postId, draw) {
     let post = {
       voteCount: voteCount += 1
     }
     postItApi.put(`/posts/${postId}`, post)
+    let wait = setTimeout(this.getPosts(draw), 1000)
   }
 
-  downPostPost(voteCount, postId) {
+  downPostPost(voteCount, postId, draw) {
     let post = {
       voteCount: voteCount -= 1
     }
     postItApi.put(`/posts/${postId}`, post)
+    this.getPosts(draw)
   }
 }

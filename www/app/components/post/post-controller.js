@@ -30,11 +30,11 @@ export default class PostConroller {
   }
 
   upPostPost(voteCount, postId) {
-    store.upPostPost(voteCount, postId)
+    store.upPostPost(voteCount, postId, draw)
   }
 
   downPostPost(voteCount, postId) {
-    store.downPostPost(voteCount, postId)
+    store.downPostPost(voteCount, postId, draw)
   }
 }
 
