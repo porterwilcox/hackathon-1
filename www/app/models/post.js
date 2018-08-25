@@ -16,6 +16,7 @@ export default class Post {
   <div id="${this._id}" class="collapse post-body flex-column">
   <div class="username">${this.username}</div>
   <div class="username">${this.timestamp}</div>
+  <div><img src=${this.imgUrl}></div>
   ${this.content}
   <button class="btn comment-button">Comment</button>
 </div>
