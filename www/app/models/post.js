@@ -18,9 +18,12 @@ export default class Post {
   <div class="username">${this.timestamp}</div>
   <div><img src=${this.imgUrl}></div>
   ${this.content}
+  <div class="button-row">
   <button class="btn up-post-button my-1" onclick="app.controllers.post.upPostPost(${this.voteCount}, '${this._id}')">UpPost</button>
   <button class="btn down-post-button my-1" onclick="app.controllers.post.downPostPost(${this.voteCount}, '${this._id}')">DownPost</button>
-  <button class="btn comment-button my-1">Comment</button>
+  <button class="btn comment-button my-1" onclick="app.controllers.comment.postComment(${this._id}, ${this.username})">Comment</button>
+  <button class="btn comment-button my-1">Show Comments</button>
+</div>
 </div>
   `
   }
