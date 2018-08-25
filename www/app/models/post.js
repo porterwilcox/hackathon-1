@@ -13,10 +13,11 @@ export default class Post {
   get listTemplate() {
     return `
   <div id="posts" class="post-head"><button class="btn expand-button mr-3" data-toggle="collapse" role="button" href="#${this._id}"><i class="fas fa-plus"></i></button>${this.title}</div>
-  <div id="${this._id}" class="collapse post-body">
-  <div class="username flex-row">${this.username}</div>
-  <div class="username flex-row">${this.timestamp}</div>
+  <div id="${this._id}" class="collapse post-body flex-column">
+  <div class="username">${this.username}</div>
+  <div class="username">${this.timestamp}</div>
   ${this.content}
+  <button class="btn default-button">login</button>
 </div>
   `
   }
