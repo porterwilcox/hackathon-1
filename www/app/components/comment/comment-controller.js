@@ -20,3 +20,8 @@ export default class CommentController {
     document.querySelector(".comment-modal").style.display = "block"
   }
 }
+document.querySelector(".comment-modal").onclick = function (event) {
+  if (event.target == document.querySelector('.comment-modal')) {
+    document.querySelector('.comment-modal').style.display = 'none'
+  }
+}
