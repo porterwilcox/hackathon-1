@@ -15,7 +15,7 @@ let schema = new Schema({
     },
     userImg: {
         type: String,
-        default: "//placehold.it/100x100"
+        default: "//placehold.it/350x400"
     }
 })
 

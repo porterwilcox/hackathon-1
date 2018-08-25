@@ -41,7 +41,7 @@ export default class UserController {
     document.querySelector('.profile-modal').style.display = 'block'
     let template = `
     <div class="row">
-      <div class="col-6">
+      <div class="col-6 profile-img">
         <img src="${user.userImg}" alt="profile picture" />
         <form onsubmit="">
         <input type="url" name="userImg" placeholder="Image Address" required>
@@ -49,6 +49,8 @@ export default class UserController {
         </form>
       </div>
       <div class="col-6">
+        <h2>${user.username}</h2>
+        <i class="icon-trash fas fa-trash-alt" data-toggle="tooltip" data-placement="bottom" title="Delete User Account"></i>
 
       </div>
     </div>
