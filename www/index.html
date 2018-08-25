@@ -29,6 +29,9 @@
     </div>
     <div class="comment-modal">
       <div class="container-fluid" id="comment-modal-content">
+        <form id="post" class="d-flex justify-content-center align-items-center flex-column post-modal-height" onsubmit="app.controllers.post.postPost(event)">
+          <textarea type="text" class="large-input" name="content" placeholder="Please type your post here"></textarea>
+          <button class="btn new-post-button mt-1">Make New Coment</button>
       </div>
     </div>
     <div class="post-modal">
