@@ -124,6 +124,24 @@ body form {
   box-shadow: 0 0 97px 13px rgb(0, 0, 0);
 }
 
+.comment-modal {
+  display: none;
+  z-index: 2;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.74)
+}
+
+#comment-modal-content {
+  background-color: #2B4353;
+  border-radius: 2%;
+  margin: auto;
+  width: 70vw;
+  height: 70vh;
+  border: 7px solid white;
+  box-shadow: 0 0 97px 13px rgb(0, 0, 0);
+}
 .icon-cog {
   color: rgb(78, 78, 78);
   cursor: pointer;

@@ -12,4 +12,11 @@ export default class CommentController {
   getComments(postId) {
     store.getComments(postId, draw)
   }
+  commentModal(postId){
+    if (!store.state.user.hasOwnProperty("username")){
+      return alert("Please login or sign up to make comments")
+    }
+    let username = store.state.user.username
+    document.querySelector(".comment-modal").style.display = "block"
+  }
 }
