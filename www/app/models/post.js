@@ -21,39 +21,4 @@ export default class Post {
   `
   }
 
-  get detailsTemplate() {
-    return `
-<div>
-  <h1>
-   ${this.description}
-  </h1>
- <div id="title"></div>
-</div>
-<div>
-  <h1>
-   ${this.description}
-  </h1>
- <div id="voteCount"></div>
-</div>
-<div>
-  <h1>
-   ${this.description}
-  </h1>
- <div id="timestamp"></div>
-</div>
-<div>
-  <h1>
-   ${this.description}
-  </h1>
- <div id="content"></div>
-</div>
-<div>
-  <h1>
-   ${this.description}
-  </h1>
- <div id="userId"></div>
-</div>
-  `
-  }
-
 }
