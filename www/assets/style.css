@@ -129,15 +129,16 @@ body form {
 }
 
 .simple-input {
-  width: 100%;
+  width: 70%;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
 }
 
 .large-input {
-  width: 100%;
+  width: 70%;
   padding: 12px 20px;
+  height: 50%;
   margin: 8px 0;
   box-sizing: border-box;
 }
