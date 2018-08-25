@@ -40,7 +40,7 @@ export default class UserController {
     let user = store.state.user
     document.querySelector('.profile-modal').style.display = 'block'
     let template = `
-    <div class="row">
+    <div class="row profile-settings">
       <div class="col-6 profile-img">
         <img src="${user.userImg}" alt="profile picture" />
         <form onsubmit="">
@@ -48,8 +48,8 @@ export default class UserController {
         <button type="submit" class="default-button">Submit</button>
         </form>
       </div>
-      <div class="col-6">
-        <h2>${user.username}</h2>
+      <div class="col-6 user-delete">
+        <h1>${user.username}</h1>
         <i class="icon-trash fas fa-trash-alt" data-toggle="tooltip" data-placement="bottom" title="Delete User Account"></i>
 
       </div>
