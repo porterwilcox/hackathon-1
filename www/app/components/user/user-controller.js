@@ -27,8 +27,12 @@ export default class UserController {
   }
 
   register(e) {
+    if(e.target.password.value !== e.target.password1.value){
+      return alert("please confirm password")
+    }
     e.preventDefault();
     store.register(e.target, draw)
+    document.querySelector('.profile-modal').style.display = 'block'
   }
 
   drawProfile() {
