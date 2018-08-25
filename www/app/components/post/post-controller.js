@@ -18,7 +18,10 @@ export default class PostConroller {
     document.querySelector('.post-modal').style.display = 'block'
   }
 
-
+  postPost(e) {
+    e.preventDefault();
+    store.postPost(e.target, draw)
+  }
 }
 
 window.onclick = function (event) {
@@ -26,3 +29,5 @@ window.onclick = function (event) {
     document.querySelector('.post-modal').style.display = 'none'
   }
 }
+
+
