@@ -11,22 +11,10 @@ export default class Post {
 
   get listTemplate() {
     return `
-  <div class="title">
-    ${this.description}
-  </div>
-  <div class="voteCount">
-    ${this.description}
-  </div>
-  <div class="timestamp">
-    ${this.description}
-  </div>
-  <div class="content">
-    ${this.description}
-  </div>
-  <div class="userId">
-    ${this.description}
-  </div>
-
+  <div id="posts" class="post-head"><button class="btn expand-button mr-3" data-toggle="collapse" role="button" href="#${this._id}"><i class="fas fa-plus"></i></button>${this.title}</div>
+  <div id="${this._id}" class="collapse post-body">
+    ${this.content}
+</div>
   `
   }
 

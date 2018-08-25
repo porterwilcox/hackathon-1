@@ -50,10 +50,10 @@ export default class Store {
     }
   }
   getPosts(draw) {
-    fetch('api/posts/by-user/' + state.user._id)
-      .then(res => res.json())
+    postItApi.get("/posts")
       .then(data => {
-        setState('posts', data.map(post => new Post(post)))
+        console.log(data)
+        setState('posts', data.data.map(post => new Post(post)))
         draw()
       })
   }
