@@ -30,7 +30,7 @@ export default class PostConroller {
   }
 
   upPostPost() {
-
+    store.upPostPost(voteCount)
   }
 }
 

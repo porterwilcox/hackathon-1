@@ -45,7 +45,8 @@ export default class Store {
     if (store) {
       return store
     }
-    store = this
+    store = this;
+    this.upPostPost = undefined;
   }
   get state() {
     return {
@@ -100,7 +101,7 @@ export default class Store {
     postItApi.put(`/users/${userId}`, {
       userImg: imgData.userImg.value
     })
-      drawProfile()
+    drawProfile()
   }
   deleteUser(userId) {
     postItApi.delete(`/users/${userId}`)
