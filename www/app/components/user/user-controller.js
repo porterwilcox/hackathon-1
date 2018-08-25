@@ -59,8 +59,8 @@ export default class UserController {
 
   updateUser(e){
     e.preventDefault()
-    console.log(e)
-    store.updateUser(e.target, this.drawProfile)
+    let userId = store.state.user._id
+    store.updateUser(e.target, userId, this.drawProfile)
   }
 
   deleteUser(){
