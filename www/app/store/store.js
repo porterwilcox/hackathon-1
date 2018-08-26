@@ -7,9 +7,6 @@ const postItApi = axios.create({
   baseURL: `//localhost:3000`,
   timeout: 3000
 })
-let time = new Date()
-let hour = time.getHours()
-let min = time.getMinutes()
 let store
 
 let state = {
@@ -24,6 +21,9 @@ function setState(prop, data) {
 
 export default class Store {
   postPost(postData, userId, username, draw) {
+    let time = new Date()
+    let hour = time.getHours()
+    let min = time.getMinutes()
     postItApi.post("/posts", {
       userId: userId,
       username: username,
